@@ -12,6 +12,7 @@ services:
       - "5000:5000"
     environment:
       - FLASK_ENV=development
+      - PYTHONUNBUFFERED=1
 
   notification-worker:
     build: ./notification-microservice

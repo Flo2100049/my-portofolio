@@ -4,6 +4,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from pymongo import MongoClient
 from dotenv import load_dotenv
+from rabbitmq_client import publish_to_rabbitmq
 
 load_dotenv()
 
@@ -15,6 +16,7 @@ CORS(app)
 MONGO_URI = os.getenv("MONGO_URI")
 client = MongoClient(MONGO_URI)
 db = client.get_default_database()
+
 
 @app.route('/health', methods=['GET'])
 def health_check():
@@ -31,7 +33,13 @@ def handle_contact():
         "email": data.get('email'),
         "message": data.get('message'),
     }
-    db.contacts.insert_one(contact_doc)
+    result = db.contacts.insert_one(contact_doc)
+    
+    #Kanoyme serialize to _id gia na mporoyme na to apothikeusoyme sto rabbitmq
+    contact_doc['_id'] = str(result.inserted_id)
+    
+    # Apostoloi toy mhnumatow sto rabbitmq
+    publish_to_rabbitmq(contact_doc)
     
     return jsonify({"success": True, "message": "Contact saved successfully!"}), 201
 
