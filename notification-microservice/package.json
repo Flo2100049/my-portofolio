@@ -7,6 +7,9 @@
         "start": "node index.js"
     },
     "dependencies": {
-        "amqplib": "^0.10.3"
+        "amqplib": "^0.10.3",
+        "dotenv": "^16.3.1",
+        "@sendgrid/mail": "^8.1.0",
+        "twilio": "^4.19.0"
     }
 }

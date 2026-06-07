@@ -16,6 +16,8 @@ services:
 
   notification-worker:
     build: ./notification-microservice
+    env_file:
+      - ./notification-microservice/.env
     depends_on:
       - rabbitmq
 
