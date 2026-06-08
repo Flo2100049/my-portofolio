@@ -70,7 +70,7 @@ jobs:
         run: |
           sed -i "s|image: floriankamaj/my-portfolio-app:frontend-.*|image: floriankamaj/my-portfolio-app:frontend-${{ steps.vars.outputs.sha_short }}|g" k8s/frontend-deployment.yaml
           sed -i "s|image: floriankamaj/my-portfolio-app:backend-.*|image: floriankamaj/my-portfolio-app:backend-${{ steps.vars.outputs.sha_short }}|g" k8s/backend-deployment.yaml
-          sed -i "s|image: floriankamaj/my-portfolio-app:worker-.*|image: floriankamaj/my-portfolio-app:worker-${{ github.sha }}|g" k8s/notification-worker-deployment.yaml
+          sed -i "s|image: floriankamaj/my-portfolio-app:worker-.*|image: floriankamaj/my-portfolio-app:worker-${{ steps.vars.outputs.sha_short }}|g" k8s/notification-worker-deployment.yaml
 
       - name: Commit and Push changes back to GitHub
         run: |
