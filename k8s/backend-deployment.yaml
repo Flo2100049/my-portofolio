@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:backend-latest # Θα το αλλάξουμε μέσω ArgoCD
+        env:
+        - name: MONGO_URI
+          value: "mongodb://mongodb:27017/portfolio"
+        ports:
+        - containerPort: 5000
+---
+# k8s/backend-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend-service
+spec:
+  selector:
+    app: backend
+  ports:
+    - protocol: TCP
+      port: 80     
+      targetPort: 5000
