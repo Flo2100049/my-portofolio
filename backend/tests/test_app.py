@@ -1,6 +1,10 @@
 # backend-core/tests/test_app.py
 import unittest
 from app import app
+import os
+
+
+os.environ['MONGO_URI'] = 'mongodb://localhost:27017/testdb'
 
 class FlaskTestCase(unittest.TestCase):
     def setUp(self):
