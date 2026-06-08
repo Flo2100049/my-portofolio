@@ -1,10 +1,15 @@
 # backend-core/rabbitmq_client.py
+import os
+
 import pika
 import json
 
 def publish_to_rabbitmq(message_data):
     try:
-        connection = pika.BlockingConnection(pika.ConnectionParameters(host='rabbitmq'))
+        rabbitmq_url = os.environ.get('RABBITMQ_URL', 'amqp://guest:guest@rabbitmq-service:5672')
+        
+        parameters = pika.URLParameters(rabbitmq_url)
+        connection = pika.BlockingConnection(parameters)
         channel = connection.channel()
 
         channel.queue_declare(queue='contact_requests', durable=True)
