@@ -12,6 +12,8 @@ spec:
       labels:
         app: worker
     spec:
+      imagePullSecrets:
+        - name: image-registry-secret
       containers:
       - name: worker
         image: ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:worker-latest
