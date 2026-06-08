@@ -43,7 +43,17 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
           
-      - name: Build and Push Docker Image
+      - name: Build and Push Backend
         run: |
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:${{ steps.vars.outputs.sha_short }} .
-          docker push ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:${{ steps.vars.outputs.sha_short }}
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:backend-${{ steps.vars.outputs.sha_short }} ./backend-core
+          docker push ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:backend-${{ steps.vars.outputs.sha_short }}
+          
+      - name: Build and Push Worker
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:worker-${{ steps.vars.outputs.sha_short }} ./notification-worker
+          docker push ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:worker-${{ steps.vars.outputs.sha_short }}
+
+      - name: Build and Push Frontend
+        run: |
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:frontend-${{ steps.vars.outputs.sha_short }} ./frontend
+          docker push ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:frontend-${{ steps.vars.outputs.sha_short }}
