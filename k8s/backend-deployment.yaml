@@ -16,7 +16,7 @@ spec:
         - name: image-registry-secret
       containers:
       - name: backend
-        image: floriankamaj/my-portfolio-app:backend-ebeb84c
+        image: floriankamaj/my-portfolio-app:backend-b34b5b7
         resources:
           limits:
           memory: "64Mi"
