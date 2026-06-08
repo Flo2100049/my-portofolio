@@ -20,3 +20,33 @@ spec:
         env:
         - name: RABBITMQ_URL
           value: "amqp://rabbitmq:5672"
+        - name: SENDGRID_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: SENDGRID_API_KEY
+        - name: MY_EMAIL
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: MY_EMAIL
+        - name: TWILIO_ACCOUNT_SID
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: TWILIO_ACCOUNT_SID
+        - name: TWILIO_AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: TWILIO_AUTH_TOKEN
+        - name: TWILIO_WHATSAPP_NUMBER
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: TWILIO_WHATSAPP_NUMBER
+        - name: MY_WHATSAPP_NUMBER
+          valueFrom:
+            secretKeyRef:
+              name: app-secrets
+              key: MY_WHATSAPP_NUMBER
