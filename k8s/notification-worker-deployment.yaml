@@ -19,7 +19,7 @@ spec:
         image: floriankamaj/my-portfolio-app:worker-a6ce1c0
         env:
         - name: RABBITMQ_URL
-          value: "amqp://rabbitmq:5672"
+          value: "amqp://guest:guest@rabbitmq-service:5672"
         - name: SENDGRID_API_KEY
           valueFrom:
             secretKeyRef:
