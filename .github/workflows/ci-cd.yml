@@ -16,16 +16,11 @@ jobs:
         with:
           python-version: '3.9'
           
-      - name: Install dependencies
-        run: |
-          cd backend
-          pip install -r requirements.txt
-          pip install nose
-          
       - name: Run Tests
         run: |
           cd backend
-         # nosetests
+          pip install -r requirements.txt
+          nosetests
           
   build-and-push:
     needs: test
