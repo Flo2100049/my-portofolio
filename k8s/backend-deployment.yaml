@@ -16,7 +16,7 @@ spec:
         - name: image-registry-secret
       containers:
       - name: backend
-        image: floriankamaj/my-portfolio-app:backend-509a8d3
+        image: floriankamaj/my-portfolio-app:backend-818d4fc
         env:
         - name: MONGO_URI
           value: "mongodb://mongodb-service:27017/portfolio"
