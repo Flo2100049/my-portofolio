@@ -27,6 +27,13 @@ spec:
       containers:
       - name: mongodb
         image: mongo:latest
+        resources:
+          limits:
+          memory: "64Mi"
+          cpu: "100m"
+        requests:
+          memory: "32Mi"
+          cpu: "50m"
         ports:
         - containerPort: 27017
         volumeMounts:

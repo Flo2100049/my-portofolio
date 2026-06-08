@@ -17,6 +17,13 @@ spec:
       containers:
       - name: worker
         image: floriankamaj/my-portfolio-app:worker-ebeb84c
+        resources:
+          limits:
+          memory: "64Mi"
+          cpu: "100m"
+        requests:
+          memory: "32Mi"
+          cpu: "50m"
         env:
         - name: RABBITMQ_URL
           value: "amqp://guest:guest@rabbitmq-service:5672"
