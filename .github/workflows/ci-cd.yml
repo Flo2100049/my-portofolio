@@ -17,10 +17,12 @@ jobs:
           python-version: '3.9'
           
       - name: Run Tests
+        env:
+          MONGO_URI: mongodb://localhost:27017/testdb
         run: |
           cd backend
           pip install -r requirements.txt
-          nosetests
+          nosetests --with-color
           
   build-and-push:
     needs: test
