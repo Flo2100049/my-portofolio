@@ -13,9 +13,11 @@ spec:
       labels:
         app: frontend
     spec:
+      imagePullSecrets:
+        - name: image-registry-secret
       containers:
       - name: frontend
-        image: ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:frontend-latest
+        image: floriankamaj/my-portfolio-app:frontend-a6ce1c0
         ports:
         - containerPort: 80
 ---
