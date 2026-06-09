@@ -535,6 +535,7 @@ body {
 
 .input-group input,
 .input-group textarea {
+  box-sizing: border-box;
   width: 100%;
   padding: 0.85rem 1rem;
   background-color: rgba(8, 15, 13, 0.6);
@@ -694,11 +695,11 @@ body {
     justify-content: center;
     padding: 1rem;
     flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .topmenu {
-    margin-left: 0.6rem;
-    margin-right: 0.6rem;
+    margin: 0;
     font-size: 0.85rem;
   }
 
