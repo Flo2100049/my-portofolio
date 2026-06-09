@@ -2,7 +2,9 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+    paths:
       - 'backend/**'
       - 'frontend/**'
       - 'notification-microservice/**'
