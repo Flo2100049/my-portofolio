@@ -2,8 +2,11 @@ name: CI/CD Pipeline
 
 on:
   push:
-    branches:
-      - '**'
+    branches: [main]
+      - 'backend/**'
+      - 'frontend/**'
+      - 'notification-microservice/**'
+      - '.github/workflows/ci-cd.yml'
 
 jobs:
   test:

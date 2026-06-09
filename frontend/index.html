@@ -1,156 +1,340 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Florian Kamaj - Portfolio</title>
   <link rel="stylesheet" href="./style.css" />
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </head>
 
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div id="home">
-      <div class="profile_name">
-        Florian Kamaj
-        <div class="contact_info">
-          <img src="html_finalprojimages/envelope.png" alt="https://icons8.com/icon/124377/circled-envelope" />
-          gianiskamai@email.com
-        </div>
-        <div style="clear:both;"></div>
-        <div class="contact_info">
-          <img src="html_finalprojimages/phone.png" alt="https://icons8.com/icon/124377/circled-envelope" />
-          +6949313274
-
-        </div>
-      </div>
-      <div class="topdiv">
-        <a class="topmenu" href="#about-me">About Me</a>
-        <a class="topmenu" href="#skills">Skills</a>
-        <a class="topmenu" href="#projects">Projects</a>
-        <a class="topmenu" href="contact.html">Contact Me</a>
-      </div>
+  <nav id="navbar">
+    <div class="nav-links">
+      <a class="topmenu" href="#hero-section">About</a>
+      <a class="topmenu" href="#background-section">Experience</a>
+      <a class="topmenu" href="#projects-section">Projects</a>
+      <a class="topmenu" href="#skills-section">Skills</a>
+      <a class="topmenu" href="contact.html">Contact</a>
     </div>
   </nav>
 
-  <!-- About Me -->
-  <section id="about-me" class="container">
-    <div>
-      <img
-        src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmx5MmFlcHY5N3A5c3E3d3M5MmJidW5ja241NTF1ZGFueWlnb3UwcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YRMb6dd7zprS00JdGZ/giphy.gif"
-        class="profile_image" />
+  <section id="hero-section" class="full-page-section">
+    <div class="hero-bento-grid">
+      <div class="bento-card avatar-card">
+        <img
+          src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmx5MmFlcHY5N3A5c3E3d3M5MmJidW5ja241NTF1ZGFueWlnb3UwcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/YRMb6dd7zprS00JdGZ/giphy.gif"
+          class="profile_image" alt="Developer Coding Animation" />
+      </div>
+      <div class="bento-card bio-card">
+        <h2>Hi, I'm Florian Kamaj! <img src="html_finalprojimages/waving-hand.png" width="40px" alt="Waving Hand"
+            style="vertical-align: middle;" /></h2>
+        <p class="subtitle">Informatics & Telecommunications Student</p>
+        <p class="description">
+          Undergraduate student passionately exploring the intersection of Systems Programming, Distributed
+          Architectures, and Artificial Intelligence. Focused on building low-level efficient systems, analyzing data,
+          and developing secure, scalable software solutions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="background-section" class="full-page-section">
+    <div class="section-title-container">
+      <span class="section-badge">Academic</span>
+      <h2>Education</h2>
     </div>
 
-    <div>
-      <h1>
-        Hi, I'm Florian Kamaj! <img src="html_finalprojimages/waving-hand.png" width="60px" />
-      </h1>
-      <p>
-        Informatics and Telecommunications student with a strong interest in Artificial Intelligence, Systems
-        Programming, Software Development, and Cybersecurity. My goal is to gain practical experience, develop
-        technical skills, and contribute to projects that combine innovation with technical excellence.
+    <div class="bento-card education-full-card">
+      <div class="education-columns-container">
+
+        <div class="edu-left-column">
+          <span class="sub-title">Academic Background</span>
+          <div class="edu-item">
+            <span class="timeline-date">2021 — 2026</span>
+            <h4>BSc in Informatics & Telecommunications</h4>
+            <p class="institution-name">National and Kapodistrian University of Athens (NKUA)</p>
+            <p class="item-description">
+              Specialized in Systems Programming, Distributed Architectures, Operating Systems, and Advanced AI
+              Algorithms.
+            </p>
+          </div>
+        </div>
+
+        <div class="certs-right-column">
+          <span class="sub-title">IBM Professional Certifications</span>
+
+          <div class="certs-horizontal-grid">
+
+            <div class="cert-item">
+              <div class="cert-main-info">
+                <h4>IBM Full Stack Software Developer</h4>
+                <div class="cert-tags">
+                  <code>Cloud Native</code><code>Docker</code><code>Microservices</code>
+                </div>
+              </div>
+              <a href="https://coursera.org/share/89bc6ae0d51c40468cceaa7b8fd33847" class="verify-btn"
+                target="_blank">Verify Credential →</a>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-main-info">
+                <h4>IBM DevOps & Software Engineering</h4>
+                <div class="cert-tags">
+                  <code>CI/CD</code><code>Kubernetes</code><code>IaC</code>
+                </div>
+              </div>
+              <a href="https://coursera.org/share/c3fb5f0a3b41d769dbaf95206be60f47" class="verify-btn"
+                target="_blank">Verify Credential →</a>
+            </div>
+
+            <div class="cert-item">
+              <div class="cert-main-info">
+                <h4>IBM Data Science</h4>
+                <div class="cert-tags">
+                  <code>Python</code><code>ML</code><code>SQL</code>
+                </div>
+              </div>
+              <a href="https://coursera.org/share/6c2b8278113a079bb2a47e340220d2bf" class="verify-btn"
+                target="_blank">Verify Credential →</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience-section" class="full-page-section">
+    <div class="section-title-container">
+      <span class="section-badge">Employment</span>
+      <h2>Work Experience</h2>
+    </div>
+
+    <div class="bento-card experience-full-card">
+      <div class="experience-header-block">
+        <div class="exp-title-meta">
+          <span class="timeline-date">Jan 2026 — Jun 2026</span>
+          <h4>Software & DevOps Engineer (Intern)</h4>
+          <p class="company-name">
+            Plaixus | EU Horizon Europe Project
+            <a href="https://www.mirandaproject.eu/" target="_blank" class="project-official-link">"MIRANDA" ↗</a>
+          </p>
+        </div>
+      </div>
+
+      <p class="project-context-quote">
+        <strong>Context:</strong> MIRANDA is a Horizon Europe-funded cybersecurity project focused on developing
+        adaptive digital twin models and monitoring controls for service supply chains.
       </p>
-    </div>
-  </section>
 
-  <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div style="clear:both;"></div>
+      <p class="exp-summary">
+        Acted as a core member of the technical team, bridging the gap between software development and cloud
+        infrastructure while coordinating multi-partner subsystem integrations in a highly distributed European
+        ecosystem.
+      </p>
 
-    <div class="all_skills">
-      <div class="skill">
-        <img src="html_finalprojimages/html5.png" />
-        <h6>HTML</h6>
-        <p>Still gathering experience</p>
-      </div>
+      <ul class="exp-bullet-points">
+        <li><strong>GitOps & CI/CD:</strong> Designed and implemented a modern GitOps architecture from scratch,
+          leveraging GitLab CI/CD pipelines and configuring ArgoCD for automated continuous deployment of partner
+          services.</li>
+        <li><strong>Kubernetes Infrastructure:</strong> Managed multi-tenant deployments, orchestrated Kubernetes
+          manifests, resolved complex networking bugs (Ingress controllers, DNS routing, LoadBalancer IP pools), and
+          managed persistent storage via NFS PVCs.</li>
+        <li><strong>Data Pipelines & APIs:</strong> Developed Python/Flask RESTful APIs for the Data Handling Pipeline
+          (DHP) component and engineered robust log processing pipelines using Logstash.</li>
+        <li><strong>Observability & Analytics:</strong> Deployed the Elastic Stack (Elasticsearch & Kibana) to index and
+          visualize large-scale project analytics, establishing real-time system monitoring.</li>
+      </ul>
 
-      <div class="skill">
-        <img src="html_finalprojimages/js.jpeg" />
-        <h6>JavaScript</h6>
-        <p>Stil gathering experience</p>
-      </div>
-
-      <div class="skill">
-        <img src="html_finalprojimages/CSS3.png" />
-        <h6>CSS</h6>
-        <p>Stil gathering experience</p>
-      </div>
-
-      <div class="skill">
-        <img src="html_finalprojimages/react.png" />
-        <h6>React</h6>
-        <p>Stil gathering experience</p>
-      </div>
-
-      <div class="skill">
-        <img src="html_finalprojimages/react.png" />
-        <h6>C, C++</h6>
-        <p>Advanced</p>
-      </div>
-
-      <div class="skill">
-        <img src="html_finalprojimages/react.png" />
-        <h6>SQL</h6>
-        <p>Intermediate</p>
-      </div>
-
-      <div class="skill">
-        <img src="html_finalprojimages/react.png" />
-        <h6>Python</h6>
-        <p>Intermediate</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section class="projects" id="projects">
-    <h2>
-      Projects
-    </h2>
-    <div style="clear:both;"></div>
-
-    <div id="projects-container" class="projects-container">
-      <div class="project-card">
-        <h3>Game Development</h3>
-        <ul>
-          <li>Development of a 2D game in C++ using Object-Oriented Programming principles.</li>
-        </ul>
-      </div>
-      <hr>
-      <div class="project-card">
-        <h3>Database Design</h3>
-        <ul>
-          <li> Database design in SQL, data extraction with Python, and web visualization (HTML, local host).</li>
-        </ul>
-      </div>
-      <hr>
-      <div class="project-card">
-        <h3>File synchronization</h3>
-        <ul>
-          <li> File synchronization system in C: (a) local version using system calls, fork/exec, pipes, and Bash
-            scripting, (b) network version with sockets, threads, and condition variables.</li>
-        </ul>
-      </div>
-      <hr>
-      <div class="project-card">
-        <h3>Sentiment and Recommendation System</h3>
-        <ul>
-          <li> NLP & Recommendation Systems: Development and evaluation of models (Word2Vec, GloVe,
-            BERT, DistilBERT) using PyTorch; sentiment classification and recommendation systems (Collaborative &
-            Content-Based Filtering)</li>
-        </ul>
+      <div class="exp-tech-footer">
+        <span class="tech-label">Technologies:</span>
+        <div class="cert-tags">
+          <code>Kubernetes</code><code>ArgoCD</code><code>GitOps</code><code>GitLab CI/CD</code><code>Python (Flask)</code><code>ELK Stack</code><code>Docker</code><code>Nginx Ingress</code>
+        </div>
       </div>
     </div>
   </section>
-  <div style="clear:both;"></div>
 
-  <div class="popup" id="popup" class="flex_center">
-    <img src="html_finalprojimages/checkmark--outline.svg" />
-    <h3>Thanks you so much for the recommendation!!!</h3>
-    <button onclick="showPopup(false)">Ok</button>
-  </div>
-</body>
+  <section id="projects-section" class="full-page-section">
+    <div class="section-title-container">
+      <span class="section-badge">Showcase</span>
+      <h2>Featured Projects</h2>
+    </div>
+
+    <div class="projects-bento-grid">
+
+      <div class="project-card wide-card">
+        <div class="proj-header">
+          <span class="timeline-date">2025</span>
+          <h3>NLP & Recommendation Engine</h3>
+        </div>
+        <p class="proj-description">
+          Developed and evaluated advanced NLP architectures and recommendation workflows using PyTorch. Implemented
+          semantic embeddings and deep models (Word2Vec, GloVe, BERT, DistilBERT) for sentiment classification,
+          alongside Collaborative & Content-Based Filtering, Clustering, and Linear Regression algorithms.
+        </p>
+        <div class="proj-tech-and-links">
+          <div class="cert-tags">
+            <code>PyTorch</code><code>BERT</code><code>NLP</code><code>Machine Learning</code><code>Scikit-Learn</code>
+          </div>
+          <div class="proj-links">
+            <a href="https://www.kaggle.com/sdi2100049" target="_blank" class="verify-btn">Kaggle Notebook ↗</a>
+            <a href="https://drive.google.com/drive/folders/1vFnWQG-xkJJQF3H-f5n1MjuKBYWB80Te?usp=sharing"
+              target="_blank" class="verify-btn">Drive Project ↗</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card wide-card">
+        <div class="proj-header">
+          <span class="timeline-date">2026</span>
+          <h3>Cloud-Native Production Portfolio</h3>
+        </div>
+        <p class="proj-description">
+          Designed and engineered a microservices-based personal platform deployed on a Kubernetes cluster. Implemented
+          GitOps practices via ArgoCD, automated container image building with GitHub Actions, configured RabbitMQ for
+          asynchronous notification queuing, and established secure SSL traffic management via cert-manager.
+        </p>
+        <div class="proj-tech-and-links">
+          <div class="cert-tags">
+            <code>Kubernetes</code><code>ArgoCD</code><code>GitOps</code><code>RabbitMQ</code><code>Docker</code><code>Nginx Ingress</code>
+          </div>
+          <span class="current-badge">Current Infrastructure</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="proj-header">
+          <span class="timeline-date">2024</span>
+          <h3>Unix & Network File Synchronizer</h3>
+        </div>
+        <p class="proj-description">
+          Built a robust file sync engine in C. Features a local architecture utilizing system calls, fork/exec, IPC
+          pipes, and Bash scripting, alongside a distributed network variant utilizing sockets, multi-threading, and
+          condition variables for thread synchronization.
+        </p>
+        <div class="cert-tags">
+          <code>C Programming</code><code>Linux Systems</code><code>Sockets</code><code>Posix Threads</code>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="proj-header">
+          <span class="timeline-date">2024</span>
+          <h3>Delaunay Triangulation Optimization</h3>
+        </div>
+        <p class="proj-description">
+          Developed as a core academic project in C++ leveraging the CGAL (Computational Geometry Algorithms Library).
+          Focused on implementing and optimizing advanced geometric algorithms for multi-part Delaunay triangulation
+          workflows.
+        </p>
+        <div class="proj-tech-and-links">
+          <div class="cert-tags">
+            <code>C++</code><code>CGAL</code><code>Algorithms</code>
+          </div>
+          <a href="https://github.com/Flo2100049/project_ergasia_1.git" target="_blank" class="verify-btn">GitHub
+            Repository ↗</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="proj-header">
+          <span class="timeline-date">2023</span>
+          <h3>OOP 2D Game Engine</h3>
+        </div>
+        <p class="proj-description">
+          Designed and programmed a 2D game in C++ from scratch, applying advanced Object-Oriented Programming (OOP)
+          design patterns, polymorphic structures, and memory safety practices.
+        </p>
+        <div class="proj-tech-and-links">
+          <div class="cert-tags">
+            <code>C++</code><code>OOP</code><code>Game Dev</code>
+          </div>
+          <a href="https://youtu.be/jkqOY5UbsAg?si=HAnquG70qUJ7ebky" target="_blank" class="verify-btn">Watch Video Demo
+            ↗</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="skills-section" class="full-page-section">
+    <div class="section-title-container">
+      <span class="section-badge">Capabilities</span>
+      <h2>Technical Core</h2>
+    </div>
+
+    <div class="skills-bento-grid">
+
+      <div class="skills-group-card">
+        <h4>Languages & Systems</h4>
+        <div class="skills-tags-wrapper">
+          <div class="tech-tag advanced"><span>C / C++</span><small>Advanced</small></div>
+          <div class="tech-tag"><span>Python</span><small>Intermediate</small></div>
+          <div class="tech-tag"><span>SQL</span><small>Intermediate</small></div>
+          <div class="tech-tag"><span>Bash Scripting</span><small>Core</small></div>
+          <div class="tech-tag"><span>JavaScript</span><small>Core</small></div>
+        </div>
+      </div>
+
+      <div class="skills-group-card">
+        <h4>Frameworks & Runtimes</h4>
+        <div class="skills-tags-wrapper">
+          <div class="tech-tag"><span>Flask</span></div>
+          <div class="tech-tag"><span>Node.js</span></div>
+          <div class="tech-tag"><span>React</span></div>
+          <div class="tech-tag"><span>Django</span></div>
+          <div class="tech-tag"><span>PyTorch / NLP</span></div>
+        </div>
+      </div>
+
+      <div class="skills-group-card">
+        <h4>Cloud & DevOps</h4>
+        <div class="skills-tags-wrapper">
+          <div class="tech-tag infrastructure"><span>Kubernetes</span></div>
+          <div class="tech-tag infrastructure"><span>ArgoCD (GitOps)</span></div>
+          <div class="tech-tag infrastructure"><span>Docker</span></div>
+          <div class="tech-tag infrastructure"><span>GitLab CI/CD</span></div>
+          <div class="tech-tag infrastructure"><span>ELK Stack</span></div>
+          <div class="tech-tag infrastructure"><span>RabbitMQ & Kafka</span></div>
+        </div>
+      </div>
+
+      <div class="skills-group-card">
+        <h4>Tools & Ecosystem</h4>
+        <div class="skills-tags-wrapper">
+          <div class="tech-tag"><span>Linux</span></div>
+          <div class="tech-tag"><span>Git / GitHub</span></div>
+          <div class="tech-tag"><span>Postman</span></div>
+          <div class="tech-tag"><span>Nginx Ingress</span></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer id="main-footer">
+    <div class="footer-content">
+
+      <div class="footer-left">
+        <p>&copy; 2026 Florian Kamaj. All rights reserved.</p>
+        <span class="architecture-tag">Cloud-Native Architecture</span>
+      </div>
+
+      <div class="footer-contact-links">
+        <a href="mailto:gianiskamai@email.com" class="footer-link">
+          <span>Email</span>
+        </a>
+        <a href="https://github.com/Flo2100049" target="_blank" class="footer-link"> <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/florian-kamai-5470a6387" target="_blank" class="footer-link">
+          <span>LinkedIn</span>
+        </a>
+      </div>
+
+    </div>
+  </footer>
 
 </html>

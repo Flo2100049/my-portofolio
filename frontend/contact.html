@@ -2,27 +2,52 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Contact Me</title>
+    <title>Contact Me — Florian Kamaj</title>
 </head>
 
-<body>
-    <nav>
-        <a href="index.html">← Back to Home</a>
+<body class="contact-page-body">
+
+    <nav id="navbar" class="contact-nav">
+        <div class="nav-links">
+            <a href="index.html" class="topmenu">← Back to Home</a>
+        </div>
     </nav>
 
-    <section class="container">
-        <h1>Contact Me</h1>
-        <form id="contact-form">
-            <input type="text" id="name" placeholder="Your Name" required>
-            <input type="email" id="email" placeholder="Your Email" required>
-            <textarea id="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-        <div id="response-message"></div>
-    </section>
+    <main class="contact-container">
+        <div class="bento-card contact-form-card">
 
-    <script src="script.js"></script>
+            <div class="section-title-container">
+                <span class="section-badge">Get in touch</span>
+                <h2>Contact Me</h2>
+            </div>
+
+            <form id="contact-form">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Your Name</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label for="email">Your Email</label>
+                </div>
+
+                <div class="input-group">
+                    <textarea id="message" required placeholder=" " rows="5"></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+
+                <button type="submit" class="verify-btn submit-btn">Send Message —</button>
+            </form>
+
+            <div id="response-message"></div>
+        </div>
+    </main>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
