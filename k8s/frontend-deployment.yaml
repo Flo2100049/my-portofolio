@@ -17,7 +17,7 @@ spec:
         - name: image-registry-secret
       containers:
       - name: frontend
-        image: floriankamaj/my-portfolio-app:frontend-e754ed9
+        image: floriankamaj/my-portfolio-app:frontend-dc01efe
         resources:
           limits:
           memory: "64Mi"

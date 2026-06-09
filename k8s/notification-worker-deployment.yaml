@@ -16,7 +16,7 @@ spec:
         - name: image-registry-secret
       containers:
       - name: worker
-        image: floriankamaj/my-portfolio-app:worker-e754ed9
+        image: floriankamaj/my-portfolio-app:worker-dc01efe
         resources:
           limits:
           memory: "64Mi"
