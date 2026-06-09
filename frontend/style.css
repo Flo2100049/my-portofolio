@@ -22,6 +22,32 @@ body {
   overflow-x: hidden;
 }
 
+/* --- Navigation --- */
+#navbar {
+  background-color: rgba(8, 15, 13, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1.2rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.topmenu {
+  color: var(--text-muted);
+  margin-left: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.topmenu:hover {
+  color: var(--text-main);
+}
+
 /* --- Full Page Sections Configuration --- */
 .full-page-section {
   min-height: auto;
@@ -33,7 +59,6 @@ body {
   justify-content: center;
 }
 
-/* Section Header Badges (Futuristic Detail) */
 .section-title-container {
   margin-bottom: 2rem;
 }
@@ -69,16 +94,16 @@ body {
   transform: translateY(-4px);
 }
 
-/* --- SECTION 1: HERO GRID (2 Columns: 1/3 and 2/3) --- */
+/* --- SECTION 1: HERO GRID --- */
+#hero-section {
+  padding-top: 5rem;
+  padding-bottom: 1.5rem;
+}
+
 .hero-bento-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 1.5rem;
-}
-
-#hero-section {
-  padding-top: 5rem;
-  padding-bottom: 1.5rem;
 }
 
 .avatar-card {
@@ -113,333 +138,13 @@ body {
   line-height: 1.7;
 }
 
-/* --- SECTION 2: BACKGROUND GRID (2 Equal Columns) --- */
-.background-bento-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-/* --- Navigation Fixes (As requested) --- */
-#navbar {
-  background-color: rgba(8, 15, 13, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
-  padding: 1.2rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.topmenu {
-  color: var(--text-muted);
-  margin-left: 2rem;
-  font-size: 0.95rem;
-  font-weight: 500;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.topmenu:hover {
-  color: var(--text-main);
-}
-
-@media (max-width: 900px) {
-  #navbar {
-    justify-content: center;
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .topmenu {
-    margin-left: 0.75rem;
-    margin-right: 0.75rem;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 900px) {
-  /* ... οι προηγούμενοι κανόνες του navbar ... */
-
-  .hero-bento-grid {
-    grid-template-columns: 1fr !important;
-    /* Μετατρέπεται σε 1 στήλη */
-    gap: 1rem;
-  }
-
-  .avatar-card {
-    padding: 1.5rem;
-  }
-
-  .avatar-card .profile_image {
-    max-width: 180px;
-    /* Μικραίνουμε το GIF στο κινητό για να μην πιάνει όλη την οθόνη */
-    height: auto;
-  }
-
-  .bio-card {
-    padding: 1.5rem;
-    text-align: center;
-    /* Κεντράρουμε το κείμενο για πιο όμορφο mobile look */
-  }
-
-  .bio-card h2 {
-    font-size: 1.8rem;
-    /* Μικραίνουμε τον τίτλο για να μην σπάει σε πολλές γραμμές */
-  }
-
-  .bio-card .description {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-}
-
-/* --- Minimal Footer Architecture --- */
-/* --- Modern Minimal Footer Architecture --- */
-#main-footer {
-  border-top: 1px solid var(--border-color);
-  padding: 3rem 2rem;
-  margin-top: 6rem;
-  background-color: #040807;
-}
-
-.footer-content {
+/* --- SECTION 2: EDUCATION --- */
+.education-full-card {
+  width: 100%;
   max-width: 1250px;
   margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
-.footer-left {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-}
-
-.footer-left p {
-  font-size: 0.9rem;
-  color: var(--text-main);
-}
-
-.architecture-tag {
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: #4e7054;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-/* Links Container */
-.footer-contact-links {
-  display: flex;
-  gap: 1.5rem;
-  align-items: center;
-}
-
-/* Individual Footer Link Layout */
-.footer-link {
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: all 0.2s ease;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-}
-
-.footer-link:hover {
-  color: var(--text-main);
-  background-color: rgba(255, 255, 255, 0.02);
-}
-
-.footer-link.tel-link:hover {
-  background-color: transparent;
-  color: var(--text-main);
-}
-
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-
-  .footer-contact-links {
-    flex-direction: column;
-    gap: 0.75rem;
-
-    /* --- Consolidated Responsive Media Queries --- */
-    @media (max-width: 1100px) {
-      .education-columns-container {
-        grid-template-columns: 1fr;
-      }
-
-      .edu-left-column {
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        padding-right: 0;
-        padding-bottom: 2rem;
-      }
-    }
-
-    @media (max-width: 900px) {
-
-      /* Navbar */
-      #navbar {
-        justify-content: center;
-        padding: 1rem;
-        flex-wrap: wrap;
-      }
-
-      .topmenu {
-        margin-left: 0.6rem;
-        margin-right: 0.6rem;
-        font-size: 0.85rem;
-      }
-
-      /* Hero -> single column */
-      .hero-bento-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-      }
-
-      .avatar-card {
-        padding: 1.5rem;
-        display: flex;
-        justify-content: center;
-      }
-
-      .avatar-card .profile_image {
-        max-width: 160px;
-        height: auto;
-      }
-
-      .bio-card {
-        padding: 1.5rem;
-        text-align: center;
-      }
-
-      .bio-card h2 {
-        font-size: 1.7rem;
-      }
-
-      .bio-card .description {
-        font-size: 1rem;
-        line-height: 1.5;
-      }
-
-      /* Projects to single column */
-      .projects-bento-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project-card.wide-card {
-        grid-column: span 1;
-      }
-
-      .proj-tech-and-links {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-      }
-    }
-
-    @media (max-width: 850px) {
-      .skills-bento-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .certs-horizontal-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 768px) {
-
-      /* Footer stack */
-      .footer-content {
-        flex-direction: column;
-        gap: 1.5rem;
-        text-align: center;
-      }
-
-      .footer-contact-links {
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-
-      .footer-link.tel-link {
-        border-left: none;
-        padding-left: 0.5rem;
-      }
-
-      /* Contact form responsiveness */
-      .contact-container {
-        padding: 1.5rem;
-      }
-
-      .contact-form-card {
-        max-width: 100%;
-        padding: 2rem;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .full-page-section {
-        padding: 1.25rem 0.8rem;
-      }
-
-      .bento-card {
-        padding: 1rem;
-      }
-
-      .avatar-card .profile_image {
-        max-width: 140px;
-      }
-
-      .bio-card h2 {
-        font-size: 1.6rem;
-      }
-
-      .proj-header h3 {
-        font-size: 1.1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-
-      /* Small phones: tighten spacing */
-      body {
-        font-size: 15px;
-      }
-
-      .section-title-container h2 {
-        font-size: 1.6rem;
-      }
-
-      .contact-form-card {
-        padding: 1.25rem;
-      }
-
-      .input-group input,
-      .input-group textarea {
-        padding: 0.75rem 0.9rem;
-        font-size: 0.95rem;
-      }
-    }
-
-  }
-
-  .footer-link.tel-link {
-    border-left: none;
-    padding-left: 0.5rem;
-  }
-}
-
-/* --- New Two-Column Layout for Education Card --- */
 .education-columns-container {
   display: grid;
   grid-template-columns: 1fr 2.5fr;
@@ -490,14 +195,13 @@ body {
   line-height: 1.6;
 }
 
-/* --- Right Side: Certifications Grid --- */
+/* Certifications Grid */
 .certs-horizontal-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
 }
 
-/* Premium Card Design */
 .cert-item {
   background-color: rgba(255, 255, 255, 0.01);
   border: 1px solid var(--border-color);
@@ -558,23 +262,11 @@ body {
   background-color: rgba(59, 102, 75, 0.15);
 }
 
-@media (max-width: 1100px) {
-  .education-columns-container {
-    grid-template-columns: 1fr;
-  }
-
-  .edu-left-column {
-    border-right: none;
-    border-bottom: 1px solid var(--border-color);
-    padding-right: 0;
-    padding-bottom: 2rem;
-  }
-}
-
-@media (max-width: 750px) {
-  .certs-horizontal-grid {
-    grid-template-columns: 1fr;
-  }
+/* --- WORK EXPERIENCE --- */
+.experience-full-card {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
 }
 
 .project-official-link {
@@ -610,19 +302,39 @@ body {
   margin-right: 0.5rem;
 }
 
-.education-full-card {
-  width: 100%;
-  max-width: 1250px;
-  margin: 0 auto;
+.exp-bullet-points {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 2rem;
 }
 
-.experience-full-card {
-  width: 100%;
-  max-width: 1250px;
-  margin: 0 auto;
+.exp-bullet-points li {
+  font-size: 0.95rem;
+  color: var(--text-main);
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.6;
 }
 
-/* --- Projects Bento Grid Layout --- */
+.exp-bullet-points li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: #4e7054;
+  font-weight: bold;
+}
+
+.exp-tech-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* --- SECTION 3: PROJECTS --- */
 .projects-bento-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -632,7 +344,6 @@ body {
   margin: 0 auto;
 }
 
-/* Base Project Card */
 .project-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -699,22 +410,11 @@ body {
   font-weight: 600;
 }
 
-@media (max-width: 900px) {
-  .projects-bento-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card.wide-card {
-    grid-column: span 1;
-  }
-
-  .proj-tech-and-links {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+/* --- SECTION 4: SKILLS --- */
+#skills-section {
+  padding-bottom: 1rem;
 }
 
-/* --- Skills Bento Grid Layout --- */
 .skills-bento-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -722,17 +422,6 @@ body {
   width: 100%;
   max-width: 1250px;
   margin: 0 auto;
-}
-
-#skills-section {
-  padding-bottom: 1rem;
-}
-
-#main-footer {
-  border-top: 1px solid var(--border-color);
-  padding: 3rem 2rem;
-  margin-top: 2rem;
-  background-color: #040807;
 }
 
 .skills-group-card {
@@ -758,14 +447,12 @@ body {
   padding-left: 0.75rem;
 }
 
-/* Wrapper Tags */
 .skills-tags-wrapper {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
 }
 
-/* Futuristic Minimal Skill Tag */
 .tech-tag {
   background-color: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-color);
@@ -813,12 +500,7 @@ body {
   border-color: #3b664b;
 }
 
-@media (max-width: 850px) {
-  .skills-bento-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
+/* --- CONTACT PAGE --- */
 .contact-page-body {
   display: flex;
   flex-direction: column;
@@ -877,7 +559,6 @@ body {
   box-shadow: 0 0 10px rgba(59, 102, 75, 0.1);
 }
 
-/* Floating Label Animation */
 .input-group label {
   position: absolute;
   left: 1rem;
@@ -923,6 +604,77 @@ body {
   text-align: center;
 }
 
+/* --- FOOTER --- */
+#main-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 2rem;
+  margin-top: 2rem;
+  background-color: #040807;
+}
+
+.footer-content {
+  max-width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.footer-left p {
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.architecture-tag {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #4e7054;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.footer-contact-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-link {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.footer-link:hover {
+  color: var(--text-main);
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.footer-link.tel-link {
+  border-left: 1px solid var(--border-color);
+  padding-left: 1.5rem;
+}
+
+.footer-link.tel-link:hover {
+  background-color: transparent;
+  color: var(--text-main);
+}
+
+/* ==========================================================================
+   ROBUST RESPONSIVE DESIGN (MOBILE-FIRST TUNING)
+   ========================================================================== */
+
+/* --- 1100px --- */
 @media (max-width: 1100px) {
   .education-columns-container {
     grid-template-columns: 1fr;
@@ -936,6 +688,7 @@ body {
   }
 }
 
+/* --- 900px --- */
 @media (max-width: 900px) {
   #navbar {
     justify-content: center;
@@ -989,22 +742,19 @@ body {
   }
 }
 
-/* --- BREAKPOINT: 850px --- */
+/* --- 850px --- */
 @media (max-width: 850px) {
   .skills-bento-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* --- BREAKPOINT: 768px & 750px (Standard Mobile Viewports) --- */
+/* --- 768px --- */
 @media (max-width: 768px) {
-
-  /* CERTIFICATIONS */
   .certs-horizontal-grid {
     grid-template-columns: 1fr;
   }
 
-  /* FOOTER */
   .footer-content {
     flex-direction: column;
     gap: 1.5rem;
@@ -1020,9 +770,18 @@ body {
     border-left: none;
     padding-left: 0.5rem;
   }
+
+  .contact-container {
+    padding: 1.5rem;
+  }
+
+  .contact-form-card {
+    max-width: 100%;
+    padding: 2rem;
+  }
 }
 
-/* --- BREAKPOINT: 600px (Small Mobile Devices) --- */
+/* --- 600px --- */
 @media (max-width: 600px) {
   .full-page-section {
     padding: 1.5rem 1rem;
@@ -1030,5 +789,38 @@ body {
 
   .bento-card {
     padding: 1.25rem;
+  }
+
+  .avatar-card .profile_image {
+    max-width: 140px;
+  }
+
+  .bio-card h2 {
+    font-size: 1.6rem;
+  }
+
+  .proj-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* --- 480px --- */
+@media (max-width: 480px) {
+  body {
+    font-size: 15px;
+  }
+
+  .section-title-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .contact-form-card {
+    padding: 1.25rem;
+  }
+
+  .input-group input,
+  .input-group textarea {
+    padding: 0.75rem 0.9rem;
+    font-size: 0.95rem;
   }
 }
