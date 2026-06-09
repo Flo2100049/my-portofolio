@@ -146,6 +146,56 @@ body {
   color: var(--text-main);
 }
 
+@media (max-width: 900px) {
+  #navbar {
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .topmenu {
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 900px) {
+  /* ... οι προηγούμενοι κανόνες του navbar ... */
+
+  .hero-bento-grid {
+    grid-template-columns: 1fr !important;
+    /* Μετατρέπεται σε 1 στήλη */
+    gap: 1rem;
+  }
+
+  .avatar-card {
+    padding: 1.5rem;
+  }
+
+  .avatar-card .profile_image {
+    max-width: 180px;
+    /* Μικραίνουμε το GIF στο κινητό για να μην πιάνει όλη την οθόνη */
+    height: auto;
+  }
+
+  .bio-card {
+    padding: 1.5rem;
+    text-align: center;
+    /* Κεντράρουμε το κείμενο για πιο όμορφο mobile look */
+  }
+
+  .bio-card h2 {
+    font-size: 1.8rem;
+    /* Μικραίνουμε τον τίτλο για να μην σπάει σε πολλές γραμμές */
+  }
+
+  .bio-card .description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
 /* --- Minimal Footer Architecture --- */
 /* --- Modern Minimal Footer Architecture --- */
 #main-footer {
@@ -220,6 +270,167 @@ body {
   .footer-contact-links {
     flex-direction: column;
     gap: 0.75rem;
+
+    /* --- Consolidated Responsive Media Queries --- */
+    @media (max-width: 1100px) {
+      .education-columns-container {
+        grid-template-columns: 1fr;
+      }
+
+      .edu-left-column {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding-right: 0;
+        padding-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 900px) {
+
+      /* Navbar */
+      #navbar {
+        justify-content: center;
+        padding: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .topmenu {
+        margin-left: 0.6rem;
+        margin-right: 0.6rem;
+        font-size: 0.85rem;
+      }
+
+      /* Hero -> single column */
+      .hero-bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .avatar-card {
+        padding: 1.5rem;
+        display: flex;
+        justify-content: center;
+      }
+
+      .avatar-card .profile_image {
+        max-width: 160px;
+        height: auto;
+      }
+
+      .bio-card {
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .bio-card h2 {
+        font-size: 1.7rem;
+      }
+
+      .bio-card .description {
+        font-size: 1rem;
+        line-height: 1.5;
+      }
+
+      /* Projects to single column */
+      .projects-bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card.wide-card {
+        grid-column: span 1;
+      }
+
+      .proj-tech-and-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+    }
+
+    @media (max-width: 850px) {
+      .skills-bento-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .certs-horizontal-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      /* Footer stack */
+      .footer-content {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      .footer-contact-links {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .footer-link.tel-link {
+        border-left: none;
+        padding-left: 0.5rem;
+      }
+
+      /* Contact form responsiveness */
+      .contact-container {
+        padding: 1.5rem;
+      }
+
+      .contact-form-card {
+        max-width: 100%;
+        padding: 2rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .full-page-section {
+        padding: 1.25rem 0.8rem;
+      }
+
+      .bento-card {
+        padding: 1rem;
+      }
+
+      .avatar-card .profile_image {
+        max-width: 140px;
+      }
+
+      .bio-card h2 {
+        font-size: 1.6rem;
+      }
+
+      .proj-header h3 {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+
+      /* Small phones: tighten spacing */
+      body {
+        font-size: 15px;
+      }
+
+      .section-title-container h2 {
+        font-size: 1.6rem;
+      }
+
+      .contact-form-card {
+        padding: 1.25rem;
+      }
+
+      .input-group input,
+      .input-group textarea {
+        padding: 0.75rem 0.9rem;
+        font-size: 0.95rem;
+      }
+    }
+
   }
 
   .footer-link.tel-link {
@@ -710,4 +921,114 @@ body {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   text-align: center;
+}
+
+@media (max-width: 1100px) {
+  .education-columns-container {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-left-column {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  #navbar {
+    justify-content: center;
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .topmenu {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  .hero-bento-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  .avatar-card {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .avatar-card .profile_image {
+    max-width: 160px;
+    height: auto;
+  }
+
+  .bio-card {
+    padding: 1.5rem;
+    text-align: center;
+  }
+
+  .bio-card h2 {
+    font-size: 1.7rem;
+  }
+
+  .projects-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card.wide-card {
+    grid-column: span 1;
+  }
+
+  .proj-tech-and-links {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+/* --- BREAKPOINT: 850px --- */
+@media (max-width: 850px) {
+  .skills-bento-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- BREAKPOINT: 768px & 750px (Standard Mobile Viewports) --- */
+@media (max-width: 768px) {
+
+  /* CERTIFICATIONS */
+  .certs-horizontal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  .footer-contact-links {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .footer-link.tel-link {
+    border-left: none;
+    padding-left: 0.5rem;
+  }
+}
+
+/* --- BREAKPOINT: 600px (Small Mobile Devices) --- */
+@media (max-width: 600px) {
+  .full-page-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .bento-card {
+    padding: 1.25rem;
+  }
 }
