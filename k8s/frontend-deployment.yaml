@@ -17,7 +17,7 @@ spec:
         - name: image-registry-secret
       containers:
       - name: frontend
-        image: floriankamaj/my-portfolio-app:frontend-fdb9016
+        image: floriankamaj/my-portfolio-app:frontend-e522568
         ports:
         - containerPort: 80
 ---

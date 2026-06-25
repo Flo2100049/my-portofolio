@@ -16,7 +16,7 @@ spec:
         - name: image-registry-secret
       containers:
       - name: worker
-        image: floriankamaj/my-portfolio-app:worker-fdb9016
+        image: floriankamaj/my-portfolio-app:worker-e522568
         env:
         - name: RABBITMQ_URL
           value: "amqp://guest:guest@rabbitmq-service:5672"
