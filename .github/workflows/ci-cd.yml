@@ -52,17 +52,17 @@ jobs:
           
       - name: Build and Push Backend
         run: |
-          docker build --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:backend-${{ steps.vars.outputs.sha_short }} ./backend
+          docker buildx --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:backend-${{ steps.vars.outputs.sha_short }} ./backend
           docker push ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:backend-${{ steps.vars.outputs.sha_short }}
           
       - name: Build and Push Worker
         run: |
-          docker build --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:worker-${{ steps.vars.outputs.sha_short }} ./notification-microservice
+          docker buildx --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:worker-${{ steps.vars.outputs.sha_short }} ./notification-microservice
           docker push ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:worker-${{ steps.vars.outputs.sha_short }}
 
       - name: Build and Push Frontend
         run: |
-          docker build --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:frontend-${{ steps.vars.outputs.sha_short }} ./frontend
+          docker buildx --platform linux/arm64 -t ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:frontend-${{ steps.vars.outputs.sha_short }} ./frontend
           docker push ${{ secrets.DOCKER_USERNAME }}/my-portfolio-app:frontend-${{ steps.vars.outputs.sha_short }}
   
 
