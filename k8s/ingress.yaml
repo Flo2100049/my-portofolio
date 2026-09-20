@@ -5,14 +5,14 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-prod"
 
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    traefik.ingress.kubernetes.io/force-ssl-redirect: "true"
+    traefik.ingress.kubernetes.io/ssl-redirect: "true"
 spec:
-  ingressClassName: nginx
-#  tls:
-#  - hosts:
-#    - floriankamaj.dev
-#    secretName: portfolio-tls-secret
+  ingressClassName: traefik
+  tls:
+  - hosts:
+    - floriankamaj.dev
+    secretName: portfolio-tls-secret
   rules:
   - host: floriankamaj.dev
     http:
